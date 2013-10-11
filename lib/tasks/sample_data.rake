@@ -1,8 +1,8 @@
 namespace :db do
 	desc "Fill database with sample data"
 	task populate: :environment do
-		admin = User.create!(name: "Example User",
-		email: "example@railstutorial.org",
+		admin = User.create!(name: "Shanid A P",
+		email: "shanyyaar@gmail.com",
 		password: "foobar",
 		password_confirmation: "foobar")
 		admin.toggle!(:admin)
@@ -12,5 +12,10 @@ namespace :db do
 			password = "password"
 			User.create!(name: name, email: email, password: password, password_confirmation: password)
 		end
+		user = User.all(limit: 6)
+		50.times do
+			content = Faker::Lorem.sentence(5)
+			user.each { |user| user.microposts.create!(content: content) }
+		end 
 	end
 end
