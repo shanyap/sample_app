@@ -13,20 +13,24 @@ box-sizing: border-box;
 html {
 overflow-y: scroll;
 }
+
 body {
 padding-top: 60px;
 }
+
 section {
 overflow: auto;
 }
+
 textarea {
 resize: vertical;
 }
+
 .center {
 text-align: center;
 h1 {
-margin-bottom: 10px;
-}
+	margin-bottom: 10px;
+	}
 }
 
 /* typography */
@@ -135,6 +139,33 @@ margin-bottom: 3px;
 .gravatar {
 float: left;
 margin-right: 10px;
+}
+.stats {
+overflow: auto;
+a {
+float: left;
+padding: 0 10px;
+border-left: 1px solid $grayLighter;
+color: gray;
+&:first-child {
+padding-left: 0;
+border: 0;
+}
+&:hover {
+text-decoration: none;
+color: $blue;
+}
+}
+strong {
+display: block;
+}
+}
+.user_avatars {
+overflow: auto;
+margin-top: 10px;
+.gravatar {
+margin: 1px 1px;
+}
 }
 
 /* forms */
